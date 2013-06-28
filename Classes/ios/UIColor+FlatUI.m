@@ -54,6 +54,10 @@
     return [UIColor colorFromHexCode:@"268ef9"];
 }
 
++ (UIColor *) navColor {
+    return [UIColor colorFromHexCode:@"3697fb"];
+}
+
 + (UIColor *) coloradoRiverColor {
     return [UIColor colorFromHexCode:@"0277c4"];
 }

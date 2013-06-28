@@ -16,6 +16,7 @@
 + (UIColor *) emerlandColor;
 + (UIColor *) nephritisColor;
 + (UIColor *) belizeHoleColor;
++ (UIColor *) navColor;
 + (UIColor *) coloradoRiverColor;
 + (UIColor *) darkColoradoRiverColor;
 + (UIColor *) amethystColor;
