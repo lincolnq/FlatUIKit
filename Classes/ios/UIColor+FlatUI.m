@@ -50,13 +50,18 @@
     return [UIColor colorFromHexCode:@"27AE60"];
 }
 
-+ (UIColor *) peterRiverColor {
-    return [UIColor colorFromHexCode:@"3498DB"];
++ (UIColor *) belizeHoleColor {
+    return [UIColor colorFromHexCode:@"268ef9"];
 }
 
-+ (UIColor *) belizeHoleColor {
-    return [UIColor colorFromHexCode:@"2980B9"];
++ (UIColor *) coloradoRiverColor {
+    return [UIColor colorFromHexCode:@"0277c4"];
 }
+
++ (UIColor *) darkColoradoRiverColor {
+    return [UIColor colorFromHexCode:@"015f9d"];
+}
+
 
 + (UIColor *) amethystColor {
     return [UIColor colorFromHexCode:@"9B59B6"];

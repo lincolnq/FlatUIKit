@@ -13,28 +13,31 @@
 
 - (void) configureFlatButtonWithColor:(UIColor *)color
                      highlightedColor:(UIColor *)highlightedColor
-                         cornerRadius:(CGFloat) cornerRadius {
+                        disabledColor:(UIColor *)disabledColor
+                         cornerRadius:(CGFloat)cornerRadius {
   
-  [UIBarButtonItem configureItemOrProxy:self forFlatButtonWithColor:color highlightedColor:highlightedColor cornerRadius:cornerRadius];
+  [UIBarButtonItem configureItemOrProxy:self forFlatButtonWithColor:color highlightedColor:highlightedColor disabledColor:disabledColor cornerRadius:cornerRadius];
   
 }
 
 + (void) configureFlatButtonsWithColor:(UIColor *) color
                       highlightedColor:(UIColor *)highlightedColor
+                         disabledColor:(UIColor *)disabledColor
                           cornerRadius:(CGFloat) cornerRadius {
   
-  [self configureFlatButtonsWithColor:color highlightedColor:highlightedColor cornerRadius:cornerRadius whenContainedIn:[UINavigationBar class], [UINavigationController class], [UIToolbar class], nil];
+  [self configureFlatButtonsWithColor:color highlightedColor:highlightedColor disabledColor:disabledColor cornerRadius:cornerRadius whenContainedIn:[UINavigationBar class], [UINavigationController class], [UIToolbar class], nil];
 }
 
 + (void) configureFlatButtonsWithColor:(UIColor *) color
                       highlightedColor:(UIColor *)highlightedColor
+                         disabledColor:(UIColor *)disabledColor
                           cornerRadius:(CGFloat) cornerRadius
                        whenContainedIn:(Class <UIAppearanceContainer>)containerClass, ... {
   va_list vl;
   va_start(vl, containerClass);
   id appearance = [UIBarButtonItem appearanceWhenContainedIn:containerClass, nil];
   va_end(vl);
-  [UIBarButtonItem configureItemOrProxy:appearance forFlatButtonWithColor:color highlightedColor:highlightedColor cornerRadius:cornerRadius];
+  [UIBarButtonItem configureItemOrProxy:appearance forFlatButtonWithColor:color highlightedColor:highlightedColor disabledColor:disabledColor cornerRadius:cornerRadius];
 }
 
 
@@ -65,6 +68,7 @@
 + (void) configureItemOrProxy:(id)appearance
        forFlatButtonWithColor:(UIColor *)color
              highlightedColor:(UIColor *)highlightedColor
+                disabledColor:(UIColor *)disabledColor
                  cornerRadius:(CGFloat) cornerRadius {
   UIImage *backButtonPortraitImage = [UIImage backButtonImageWithColor:color
                                                             barMetrics:UIBarMetricsDefault
@@ -72,12 +76,20 @@
   UIImage *highlightedBackButtonPortraitImage = [UIImage backButtonImageWithColor:highlightedColor
                                                                        barMetrics:UIBarMetricsDefault
                                                                      cornerRadius:cornerRadius];
+    UIImage *disabledBackButtonPortraitImage = [UIImage backButtonImageWithColor:disabledColor
+                                                                         barMetrics:UIBarMetricsDefault
+                                                                       cornerRadius:cornerRadius];
+
   UIImage *backButtonLandscapeImage = [UIImage backButtonImageWithColor:color
                                                              barMetrics:UIBarMetricsLandscapePhone
                                                            cornerRadius:2];
   UIImage *highlightedBackButtonLandscapeImage = [UIImage backButtonImageWithColor:highlightedColor
                                                                         barMetrics:UIBarMetricsLandscapePhone
                                                                       cornerRadius:2];
+    UIImage *disabledBackButtonLandscapeImage = [UIImage backButtonImageWithColor:disabledColor
+                                                                          barMetrics:UIBarMetricsLandscapePhone
+                                                                        cornerRadius:2];
+
   
   [appearance setBackButtonBackgroundImage:backButtonPortraitImage
                                   forState:UIControlStateNormal
@@ -91,14 +103,25 @@
   [appearance setBackButtonBackgroundImage:highlightedBackButtonLandscapeImage
                                   forState:UIControlStateHighlighted
                                 barMetrics:UIBarMetricsLandscapePhone];
+    [appearance setBackButtonBackgroundImage:disabledBackButtonPortraitImage
+                                    forState:UIControlStateDisabled
+                                  barMetrics:UIBarMetricsDefault];
+    [appearance setBackButtonBackgroundImage:disabledBackButtonLandscapeImage
+                                    forState:UIControlStateDisabled
+                                  barMetrics:UIBarMetricsLandscapePhone];
   
   [appearance setBackButtonTitlePositionAdjustment:UIOffsetMake(1.0f, 1.0f) forBarMetrics:UIBarMetricsDefault];
   [appearance setBackButtonTitlePositionAdjustment:UIOffsetMake(1.0f, 1.0f) forBarMetrics:UIBarMetricsLandscapePhone];
   
   UIImage *buttonImageNormal       = [UIImage imageWithColor:color cornerRadius:cornerRadius];
   UIImage *buttonImageHightlighted = [UIImage imageWithColor:highlightedColor cornerRadius:cornerRadius];
+    UIImage *buttonImageDisabled = [UIImage imageWithColor:disabledColor cornerRadius:cornerRadius];
+
   [appearance setBackgroundImage:buttonImageNormal forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
   [appearance setBackgroundImage:buttonImageHightlighted forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
+    [appearance setBackgroundImage:buttonImageDisabled forState:UIControlStateDisabled barMetrics:UIBarMetricsDefault];
+
+    
 }
 
 @end
