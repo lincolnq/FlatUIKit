@@ -34,6 +34,45 @@
     return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
+//-- Grayscale --//
+
++(UIColor*)whiteShadowColor {
+    return [UIColor colorWithHue:0 saturation:0 brightness:1.0 alpha:0.4];
+}
+
++(UIColor*)blackShadowColor {
+    return [UIColor colorWithHue:(204/360) saturation:0.14 brightness:0.1 alpha:1.0];
+}
+
++(UIColor*)gray20 {
+    return [UIColor colorWithRed:57/256.0 green:57/256.0 blue:57/256.0 alpha:1.0];}
+
++(UIColor*)gray40 {
+    return [UIColor colorWithRed:70/256.0 green:70/256.0 blue:70/256.0 alpha:1.0];
+}
++(UIColor*)gray60 {
+    return [UIColor colorWithRed:108/256.0 green:108/256.0 blue:108/256.0 alpha:1.0];
+}
+
++(UIColor*)gray70 {
+    //Nav bar button text gray
+    return [UIColor colorWithRed:138/256.0 green:138/256.0 blue:138/256.0 alpha:1.0];
+}
+
++(UIColor*)gray80 {
+    //Bb gray
+    return [UIColor colorWithRed:205/256.0 green:205/256.0 blue:205/256.0 alpha:1.0];
+}
+
++(UIColor*)gray90 {
+    return [UIColor colorWithRed: (190/256.0) green:(190/256.0) blue:(190/256.0) alpha:1.0];
+}
+
+
+
+
+//-- Colors --//
+
 + (UIColor *) turquoiseColor {
     return [UIColor colorFromHexCode:@"1ABC9C"];
 }
