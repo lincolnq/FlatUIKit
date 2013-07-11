@@ -27,6 +27,7 @@
 + (void) configureFlatButtonsWithColor:(UIColor *) color
                       highlightedColor:(UIColor *)highlightedColor
                          disabledColor:(UIColor *)disabledColor
+                             textColor:(UIColor *)textColor
                           cornerRadius:(CGFloat) cornerRadius;
 
 

@@ -8,6 +8,7 @@
 
 #import "UIBarButtonItem+FlatUI.h"
 #import "UIImage+FlatUI.h"
+#import "UIFont+FlatUI.h"
 
 @implementation UIBarButtonItem (FlatUI)
 
@@ -23,9 +24,13 @@
 + (void) configureFlatButtonsWithColor:(UIColor *) color
                       highlightedColor:(UIColor *)highlightedColor
                          disabledColor:(UIColor *)disabledColor
-                          cornerRadius:(CGFloat) cornerRadius {
+                             textColor:(UIColor *)textColor
+                          cornerRadius:(CGFloat)cornerRadius {
   
   [self configureFlatButtonsWithColor:color highlightedColor:highlightedColor disabledColor:disabledColor cornerRadius:cornerRadius whenContainedIn:[UINavigationBar class], [UINavigationController class], [UIToolbar class], nil];
+  
+  [[self appearance] setTitleTextAttributes: @{UITextAttributeTextColor:textColor, UITextAttributeTextShadowColor:[UIColor clearColor], UITextAttributeFont:[UIFont lightFlatFontOfSize:12]} forState:UIControlStateNormal];
+
 }
 
 + (void) configureFlatButtonsWithColor:(UIColor *) color
