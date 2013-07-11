@@ -12,36 +12,15 @@
 @implementation UIFont (FlatUI)
 
 + (UIFont *)flatFontOfSize:(CGFloat)size {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        NSURL * url = [[NSBundle mainBundle] URLForResource:@"Lato-Regular" withExtension:@"ttf"];
-		CFErrorRef error;
-        CTFontManagerRegisterFontsForURL((__bridge CFURLRef)url, kCTFontManagerScopeNone, &error);
-        error = nil;
-    });
-    return [UIFont fontWithName:@"Lato-Regular" size:size];
+    return [UIFont fontWithName:@"HelveticaNeue" size:size];
 }
 
 + (UIFont *)boldFlatFontOfSize:(CGFloat)size {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        NSURL * url = [[NSBundle mainBundle] URLForResource:@"Lato-Bold" withExtension:@"ttf"];
-		CFErrorRef error;
-        CTFontManagerRegisterFontsForURL((__bridge CFURLRef)url, kCTFontManagerScopeNone, &error);
-        error = nil;
-    });
-    return [UIFont fontWithName:@"Lato-Bold" size:size];
+    return [UIFont fontWithName:@"HelveticaNeue-Bold" size:size];
 }
 
-+ (UIFont *)italicFlatFontOfSize:(CGFloat)size {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        NSURL * url = [[NSBundle mainBundle] URLForResource:@"Lato-Italic" withExtension:@"ttf"];
-		CFErrorRef error;
-        CTFontManagerRegisterFontsForURL((__bridge CFURLRef)url, kCTFontManagerScopeNone, &error);
-        error = nil;
-    });
-    return [UIFont fontWithName:@"Lato-Italic" size:size];
++ (UIFont *)lightFlatFontOfSize:(CGFloat)size {
+    return [UIFont fontWithName:@"HelveticaNeue-Light" size:size];
 }
 
 @end
