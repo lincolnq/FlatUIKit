@@ -22,7 +22,7 @@
     }
     
     titleTextAttributes = [@{UITextAttributeTextColor:[UIColor whiteColor],
-                            UITextAttributeFont:[UIFont flatFontOfSize:20],
+                            UITextAttributeFont:[UIFont flatFontOfSize:18],
                             UITextAttributeTextShadowColor:[UIColor clearColor]
                             } mutableCopy];
     
