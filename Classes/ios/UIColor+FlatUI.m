@@ -138,8 +138,8 @@
     return [UIColor colorFromHexCode:@"D35400"];
 }
 
-+ (UIColor *) alizarinColor {
-    return [UIColor colorFromHexCode:@"E74C3C"];
++ (UIColor *) billColor {
+    return [UIColor colorFromHexCode:@"FFA800"];
 }
 
 + (UIColor *) pomegranateColor {
