@@ -61,13 +61,14 @@
                                                       cornerRadius:self.cornerRadius
                                                        shadowColor:self.shadowColor
                                                       shadowInsets:UIEdgeInsetsMake(0, 0, self.shadowHeight, 0)];
-    UIImage *highlightedBackgroundImage = [UIImage buttonImageWithColor:self.buttonColor
+    /*UIImage *highlightedBackgroundImage = [UIImage buttonImageWithColor:self.buttonColor
                                                            cornerRadius:self.cornerRadius
                                                             shadowColor:[UIColor clearColor]
                                                            shadowInsets:UIEdgeInsetsMake(self.shadowHeight, 0, 0, 0)];
+     */
     
     [self setBackgroundImage:normalBackgroundImage forState:UIControlStateNormal];
-    [self setBackgroundImage:highlightedBackgroundImage forState:UIControlStateHighlighted];
+    //[self setBackgroundImage:highlightedBackgroundImage forState:UIControlStateHighlighted];
     
 }
 
