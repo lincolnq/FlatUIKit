@@ -65,7 +65,7 @@
 }
 
 +(UIColor*)gray90 {
-    return [UIColor colorWithRed: (190/256.0) green:(190/256.0) blue:(190/256.0) alpha:1.0];
+    return [UIColor colorWithRed: (217/256.0) green:(217/256.0) blue:(217/256.0) alpha:1.0];
 }
 
 
