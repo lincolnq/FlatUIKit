@@ -142,8 +142,8 @@
     return [UIColor colorFromHexCode:@"FFA800"];
 }
 
-+ (UIColor *) pomegranateColor {
-    return [UIColor colorFromHexCode:@"C0392B"];
++ (UIColor *) brightRedColor {
+    return [UIColor colorFromHexCode:@"E20C30"];
 }
 
 + (UIColor *) cloudsColor {
