@@ -16,12 +16,7 @@
     [self setBackgroundImage:[UIImage imageWithColor:color cornerRadius:0]
                forBarMetrics:UIBarMetricsDefault & UIBarMetricsLandscapePhone];
     
-    NSMutableDictionary *titleTextAttributes = [[self titleTextAttributes] mutableCopy];
-    if (!titleTextAttributes) {
-        titleTextAttributes = [NSMutableDictionary dictionary];
-    }
-    
-    titleTextAttributes = [@{UITextAttributeTextColor:[UIColor whiteColor],
+    NSMutableDictionary *titleTextAttributes = [@{UITextAttributeTextColor:[UIColor whiteColor],
                             UITextAttributeFont:[UIFont flatFontOfSize:22],
                             UITextAttributeTextShadowColor:[UIColor clearColor]
                             } mutableCopy];
