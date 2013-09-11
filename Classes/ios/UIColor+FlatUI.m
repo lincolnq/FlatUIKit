@@ -143,7 +143,7 @@
 }
 
 + (UIColor *) brightRedColor {
-    return [UIColor colorFromHexCode:@"E20C30"];
+    return [UIColor colorFromHexCode:@"E20C16"];
 }
 
 + (UIColor *) cloudsColor {
