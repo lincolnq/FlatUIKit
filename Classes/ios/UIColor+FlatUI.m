@@ -68,6 +68,10 @@
     return [UIColor colorWithRed: (217/256.0) green:(217/256.0) blue:(217/256.0) alpha:1.0];
 }
 
++(UIColor*)gray95 {
+    return [UIColor colorWithRed: (230/256.0) green:(230/256.0) blue:(230/256.0) alpha:0.9];
+}
+
 
 
 
@@ -79,6 +83,10 @@
 
 + (UIColor *) greenSeaColor {
     return [UIColor colorFromHexCode:@"16A085"];
+}
+
++ (UIColor *) neonGreenColor {
+    return [UIColor colorFromHexCode:@"4fde67"];
 }
 
 + (UIColor *) emerlandColor {
