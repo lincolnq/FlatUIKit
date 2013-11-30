@@ -77,16 +77,23 @@
 
 //-- Colors --//
 
++ (UIColor *) neonRed {
+    return [UIColor colorFromHexCode:@"FF2500"];
+}
++ (UIColor *) neonBlue {
+    return [UIColor colorFromHexCode:@"00C0FF"];
+}
++ (UIColor *) neonGreen {
+    return [UIColor colorFromHexCode:@"11FF00"];
+}
+
+
 + (UIColor *) turquoiseColor {
     return [UIColor colorFromHexCode:@"1ABC9C"];
 }
 
 + (UIColor *) greenSeaColor {
     return [UIColor colorFromHexCode:@"16A085"];
-}
-
-+ (UIColor *) neonGreenColor {
-    return [UIColor colorFromHexCode:@"4fde67"];
 }
 
 + (UIColor *) emerlandColor {

@@ -21,9 +21,11 @@
 + (UIColor*) gray80;
 + (UIColor*) gray90;
 + (UIColor*) gray95;
++ (UIColor *) neonRed;
++ (UIColor *) neonBlue;
++ (UIColor *) neonGreen;
 + (UIColor *) turquoiseColor;
 + (UIColor *) greenSeaColor;
-+ (UIColor *) neonGreenColor;
 + (UIColor *) emerlandColor;
 + (UIColor *) nephritisColor;
 + (UIColor *) belizeHoleColor;
